@@ -26,10 +26,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
             listItemView= LayoutInflater.from(getContext()).inflate(
                     R.layout.listitem,parent,false);
         }
-        TextView texto1 = (TextView) listItemView.findViewById(R.id.miwok_number);
+        TextView texto1 = (TextView) listItemView.findViewById(R.id.miwok);
         texto1.setText(currentWord.getMiwok());
 
-        TextView texto2 = (TextView) listItemView.findViewById(R.id.english_number);
+        TextView texto2 = (TextView) listItemView.findViewById(R.id.english);
         texto2.setText(currentWord.getEnglish());
         return listItemView;
     }
