@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">/* 
+ * Copyright (C) 2016 The Android Open Source Project 
+ * 
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0 
+ * 
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License. 
+ */</span>
+<span class="s2">package </span><span class="s1">com.example.android.miwok</span><span class="s2">;</span>
+
+<span class="s2">import </span><span class="s1">android.content.Intent</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">android.os.Bundle</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">android.view.View</span><span class="s2">;</span>
+<span class="s2">import </span><span class="s1">android.widget.TextView</span><span class="s2">;</span>
+<span class="s0">// import android.support.v7.app.AppCompatActivity;</span>
+<span class="s2">import </span><span class="s1">androidx.appcompat.app.AppCompatActivity</span><span class="s2">;</span>
+
+<span class="s2">public class </span><span class="s1">MainActivity </span><span class="s2">extends </span><span class="s1">AppCompatActivity {</span>
+
+    <span class="s1">@Override</span>
+    <span class="s2">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) {</span>
+        <span class="s2">super</span><span class="s1">.onCreate(savedInstanceState)</span><span class="s2">;</span>
+
+        <span class="s0">// Set the content of the activity to use the activity_main.xml layout file</span>
+        <span class="s1">setContentView(R.layout.activity_main)</span><span class="s2">;</span>
+
+        <span class="s1">TextView numbers = (TextView) findViewById(R.id.numbers)</span><span class="s2">;</span>
+        <span class="s1">TextView family = (TextView) findViewById(R.id.family)</span><span class="s2">;</span>
+        <span class="s1">TextView colors = (TextView) findViewById(R.id.colors)</span><span class="s2">;</span>
+        <span class="s1">TextView phrases = (TextView) findViewById(R.id.phrases)</span><span class="s2">;</span>
+
+        <span class="s1">numbers.setOnClickListener(</span><span class="s2">new </span><span class="s1">View.OnClickListener(){</span>
+            <span class="s1">@Override</span>
+            <span class="s2">public void </span><span class="s1">onClick(View view){</span>
+                <span class="s1">Intent numbersIntent = </span><span class="s2">new </span><span class="s1">Intent(MainActivity.</span><span class="s2">this,</span><span class="s1">NumbersActivity.</span><span class="s2">class</span><span class="s1">)</span><span class="s2">;</span>
+                <span class="s1">startActivity(numbersIntent)</span><span class="s2">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s2">;</span>
+        <span class="s1">family.setOnClickListener(</span><span class="s2">new </span><span class="s1">View.OnClickListener(){</span>
+            <span class="s1">@Override</span>
+            <span class="s2">public void </span><span class="s1">onClick(View view){</span>
+                <span class="s1">Intent familyIntent = </span><span class="s2">new </span><span class="s1">Intent(MainActivity.</span><span class="s2">this,</span><span class="s1">FamilyActivity.</span><span class="s2">class</span><span class="s1">)</span><span class="s2">;</span>
+                <span class="s1">startActivity(familyIntent)</span><span class="s2">;</span>
+
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s2">;</span>
+
+        <span class="s1">colors.setOnClickListener(</span><span class="s2">new </span><span class="s1">View.OnClickListener() {</span>
+            <span class="s1">@Override</span>
+            <span class="s2">public void </span><span class="s1">onClick(View view) {</span>
+                <span class="s1">Intent colorsIntent = </span><span class="s2">new </span><span class="s1">Intent(MainActivity.</span><span class="s2">this,</span><span class="s1">ColorsActivity.</span><span class="s2">class</span><span class="s1">)</span><span class="s2">;</span>
+                <span class="s1">startActivity(colorsIntent)</span><span class="s2">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s2">;</span>
+
+        <span class="s1">phrases.setOnClickListener(</span><span class="s2">new </span><span class="s1">View.OnClickListener(){</span>
+            <span class="s1">@Override</span>
+            <span class="s2">public void </span><span class="s1">onClick(View view){</span>
+                <span class="s1">Intent phrasesIntent = </span><span class="s2">new </span><span class="s1">Intent(MainActivity.</span><span class="s2">this,</span><span class="s1">PhrasesActivity.</span><span class="s2">class</span><span class="s1">)</span><span class="s2">;</span>
+                <span class="s1">startActivity(phrasesIntent)</span><span class="s2">;</span>
+            <span class="s1">}</span>
+        <span class="s1">})</span><span class="s2">;</span>
+    <span class="s1">}</span>
+
+
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
